@@ -1,99 +1,75 @@
-# Django Recruit
-A Recruitment project built with Django
+💼 About Django Recruit(Sir-Kaptain)
 
-## Starter template https://github.com/ridwanray/job-portal-templates
+Django Recruit is a full-featured recruitment and internship management platform built with Python Django. It simplifies the hiring process by connecting students, recruiters, and administrators in one efficient system — from job posting and application to review and selection.
 
-# Tools & Services:
-- Django : Python Web Framework
-- Pytest: Testing Framework
-- Celery: Task scheduling
-- Flower: Task monitoring
-- Redis: Celery broker
+This project showcases practical use of Django’s powerful backend combined with modern tools for task automation, testing, and asynchronous processing, making it both scalable and production-ready.
 
+🛠️ Tech Stack & Tools
 
-# Features
+Django – Core backend framework
 
-- Login
-- Register
-- Account verification
-- Password reset
-- Sending email
-- Create/Update/Delete/List Job Adverts
-- Apply to Jobs
-- Track your applications and jobs
-- Reject & Interview candidates
-- Email notifications
+Pytest – Automated testing
 
-# Running locally
+Celery – Asynchronous task scheduling
 
-Create a .env file by copying the .env.sample provided and run:
+Flower – Celery task monitoring dashboard
 
+Redis – Message broker for Celery
 
-# Running In a VirtualEnv
+🚀 Key Features
 
-Create a virtual environment using:
-```
+User Authentication (Login, Register, Password Reset)
+
+Email-based Account Verification & Notifications
+
+Create, Edit, Delete, and View Job Adverts
+
+Apply for Internships or Jobs
+
+Track Job Applications and Recruitment Progress
+
+Recruiters can Accept, Reject, or Schedule Interviews
+
+Admin Dashboard for centralized management
+
+⚙️ Getting Started
+
+Clone the repository and create an environment file from .env.sample.
+
+Create and activate a virtual environment:
+
 python3 -m venv venv
-```
+source venv/bin/activate
 
-```
+
+Install dependencies:
+
 pip install -r requirements.txt
-```
 
-```
+
+Run migrations and start the development server:
+
 python manage.py makemigrations
-
 python manage.py migrate
-```
-
-Run the server using:
-```
 python manage.py runserver
-```
 
-Celery worker
-```
+🧩 Background Services
+
+Start Celery worker:
+
 celery -A core worker --loglevel=info
-```
-Flower dashboard
-```
-celery -A core flower --ports=5555
-```
 
-# Run tests
 
-Run tests in an activated virtualenv using:
+Launch Flower dashboard for monitoring:
 
-```
+celery -A core flower --port=5555
+
+🧪 Testing
+
+Run tests with:
+
 pytest -v -rA
-```
 
-# Login
-![Screenshot](screenshots/login.png)
+🧠 Summary
 
-
-# Register
-![Screenshot](screenshots/register-page.png.png)
-
-
-# Verify Account
-![Screenshot](screenshots/account-verification.png)
-
-
-# Reset password
-![Screenshot](screenshots/password-reset.png)
-
-
-# Home
-![Screenshot](screenshots/home.png)
-
-# My Jobs
-![Screenshot](screenshots/myjobs.png)
-
-# My Applications
-![Screenshot](screenshots/myapplications.png)
-
-
-# Flower dashboard
-![Screenshot](screenshots/flower.png)
-
+Django Recruit demonstrates a complete recruitment workflow system — robust, scalable, and production-oriented — designed to manage candidates, jobs, and communication seamlessly while highlighting modern Django development best practices.
